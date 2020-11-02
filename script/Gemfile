@@ -1,0 +1,5 @@
+source "https://rubygems.org"
+gem "rack"
+gem 'ncmb-ruby-client', '~> 0.0.6'
+gem 'nokogiri'
+gem 'httparty'

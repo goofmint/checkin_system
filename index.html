@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-10 col-offset-1">
+        <h1>オンラインイベント受け付け作成</h1>
+        <p>以下の情報を入力してください。あらかじめconnpassのイベントページで<a href="https://connpass.com/user/devcle/" target="_blank">devcle</a>が管理者に追加されていないといけません。</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-10 col-offset-1">
+        <form class="form">
+          <div class="form-group">
+            <label for="url">connpassのイベントページURL</label>
+            <input type="text" id="url" class="form-control" placeholder="https://example.connpass.com/event/100000/">
+          </div>
+          <div class="form-group">
+            <label for="url">イベントキー（任意の文字列。英数のみ）</label>
+            <input type="text" id="key" class="form-control" placeholder="DevRelMeetup51">
+          </div>
+          <button type="submit" id="submit1" class="btn btn-primary">connpassページの情報を取得</button>
+          <div class="spinner-border spinner1 hide" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row attendUrl">
+      <div class="col-10 col-offset-1">
+        <h3>受け付け用URL</h3>
+        受付のURLは <input type="text" class="form-control bitlyUrl" onclick="this.select()"> です。必ずメモしてください
+      </div>
+    </div>
+    <div class="ptype hide">
+      <div class="row">
+        <div class="col-10 col-offset-1">
+          <h2>次に参加枠ごとの参加URLを設定してください。同じURLでも構いません。</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-10 col-offset-1">
+          <table class="table">
+            <thead>
+              <tr>
+                <td>参加枠</td>
+                <td>URL</td>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <button type="submit" id="submit2" class="btn btn-primary">URLを設定する</button>
+          <div class="spinner-border spinner2 hide" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+    </div>
+  </div>
+  <script src="ncmb.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
